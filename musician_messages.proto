@@ -15,5 +15,9 @@ message Musician {
   // A list of the musician's recording IDs.
   repeated int64 recording_ids = 4;
   // The instruments the musician plays.
-  repeated string instruments = 5;
+  InstrumentList instruments = 5;
+}
+
+message InstrumentList {
+  repeated string instruments = 1;
 }
