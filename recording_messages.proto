@@ -1,0 +1,45 @@
+syntax = "proto3";
+package afrock.dance.map;
+
+option java_package = "afrock.dance.map";
+option java_multiple_files = true;
+
+import "comment_messages.proto";
+import "musician_messages.proto";
+
+// A message to represent a recording or release
+message Recording {
+  int64 id = 1; // Unique ID for this recording
+  string title = 2; // Title of the recording
+  string band = 3; // Name of the band that made the recording
+  int64 release_time = 4; // Time of the release, in seconds since Jan 1, 1970
+
+  float latitude = 5; // Latitude of the recording location
+  float longitude = 6; // Longitude of the recording location
+
+  string location = 7; // Location of the recording
+
+  bool lp_release = 8; // True if this recording was released on LP
+  bool cassette_release = 9; // True if this recording was released on cassette
+  bool cd_Release = 10; // True if this recording was released on CD
+
+  repeated Sample samples = 11; // List of samples in this recording
+  repeated string images = 12; // List of images in this recording
+  repeated Contribution contributions = 13; // List of contributions to this recording
+  repeated Comment comments = 14; // List of comments on this recording
+}
+
+message Contribution {
+  string instrument = 1;
+  Musician musician = 2;
+}
+
+message Sample {
+  string url = 1;
+  string title = 2;
+}
+
+// A message to aggregate multiple recordings
+message RecordingList {
+  repeated Recording recordings = 1;
+}

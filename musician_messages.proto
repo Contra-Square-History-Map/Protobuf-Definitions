@@ -1,0 +1,19 @@
+syntax = "proto3";
+package afrock.dance.map;
+
+option java_package = "afrock.dance.map";
+option java_multiple_files = true;
+
+// A musician
+message MusicianMessage {
+  // The unique identifier for the musician.
+  int64 id = 1;
+  // The musician's first name.
+  string first_name = 2;
+  // The musician's last name.
+  string last_name = 3;
+  // A list of the musician's recording IDs.
+  repeated int64 recording_ids = 4;
+  // The instruments the musician plays.
+  repeated string instruments = 5;
+}

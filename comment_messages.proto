@@ -1,0 +1,15 @@
+syntax = "proto3";
+package afrock.dance.map;
+
+option java_package = "afrock.dance.map";
+option java_multiple_files = true;
+
+// Comment represents a comment on a map.
+message Comment {
+  // The id is the unique identifier for this comment.
+  int64 id = 1;
+  // The author is the name of the person who wrote this comment.
+  string author = 2;
+  // The text is the body of the comment.
+  string text = 3;
+}
