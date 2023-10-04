@@ -5,7 +5,7 @@ option java_package = "afrock.dance.map";
 option java_multiple_files = true;
 
 // A musician
-message MusicianMessage {
+message Musician {
   // The unique identifier for the musician.
   int64 id = 1;
   // The musician's first name.
