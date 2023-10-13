@@ -4,6 +4,11 @@ package afrock.dance.map;
 option java_package = "afrock.dance.map";
 option java_multiple_files = true;
 
+// A collection of musicians.
+message MusicianList {
+  repeated Musician musicians = 1;
+}
+
 // A musician
 message Musician {
   // The unique identifier for the musician.
