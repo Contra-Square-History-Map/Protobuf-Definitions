@@ -12,7 +12,7 @@ message MusicianList {
 // A musician
 message Musician {
   // The unique identifier for the musician.
-  int64 id = 1;
+  string id = 1;
   // The musician's first name.
   string first_name = 2;
   // The musician's last name.

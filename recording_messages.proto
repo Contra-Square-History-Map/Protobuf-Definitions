@@ -9,7 +9,7 @@ import "musician_messages.proto";
 
 // A message to represent a recording or release
 message Recording {
-  int64 id = 1; // Unique ID for this recording
+  string id = 1; // Unique ID for this recording
   string title = 2; // Title of the recording
   string band = 3; // Name of the band that made the recording
   int64 release_time = 4; // Time of the release, in seconds since Jan 1, 1970
